@@ -10,8 +10,12 @@
         <div data-hr-toggle="{{buildName}}Hide" data-hr-style-on="display:none;">
             <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
                 <label for="{{uniqueId}}" class="control-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
-                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" {{if xUi.autocomplete}} list="{{uniqueId}}-datalist" {{/if}} />
-                {{if xUi.autocomplete}}<datalist id="{{uniqueId}}-datalist"></datalist>{{/if}}
+                {{if xUi.autocomplete}}
+                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" list="{{uniqueId}}-datalist" />
+                <datalist id="{{uniqueId}}-datalist"></datalist>
+                {{else}}
+                <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" />
+                {{/if}}
             </div>
         </div>
     </template>
@@ -151,9 +155,13 @@
             <div class="form-group" data-hr-toggle="{{buildName}}Error" data-hr-class-on="has-error">
                 <label for="{{uniqueId}}" class="col-sm-2 control-label">{{title}}<span data-hr-view="{{buildName}}ErrorMessage" data-hr-toggle="{{buildName}}Error" data-hr-style-on="display:inline" style="display:none"> - {{{this}}}</span></label>
                 <div class="col-sm-10">
-                    <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" {{if xUi.autocomplete}} list="{{uniqueId}}-datalist" {{/if}} />
+                    {{if xUi.autocomplete}}
+                    <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" list="{{uniqueId}}-datalist" />
+                    <datalist id="{{uniqueId}}-datalist"></datalist>
+                    {{else}}
+                    <input id="{{uniqueId}}" class="form-control" name="{{buildName}}" type="{{buildType}}" />
+                    {{/if}}
                 </div>
-                {{if xUi.autocomplete}}<datalist id="{{uniqueId}}-datalist"></datalist>{{/if}}
             </div>
         </div>
     </template>
