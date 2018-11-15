@@ -1,3 +1,3 @@
 declare var jsns;
 
-jsns.run("hr.defaultform");
+jsns.run("hr.form.bootstrap3");

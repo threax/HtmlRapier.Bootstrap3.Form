@@ -1,9 +1,0 @@
-[
-    {
-        "pathBase": ".",
-        "outDir": "lib/htmlrapier.form",
-        "copy": [
-          "./defaultform.js"
-        ]
-      }
-]

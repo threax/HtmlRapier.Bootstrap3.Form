@@ -1,4 +1,4 @@
-///<amd-module name="hr.defaultform"/>
+///<amd-module name="hr.form.bootstrap3"/>
 
 import * as component from 'hr.components';
 import {ComponentBuilder, VariantBuilder} from 'hr.componentbuilder';
